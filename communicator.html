@@ -50,6 +50,7 @@
     
     <!-- Modernizer js -->
     <script src="js/modernizr.custom.js"></script>
+    <script src="cities.js"></script>
 
     
     <!--[if lt IE 9]>
@@ -1258,8 +1259,13 @@
                                     <input  input type="number" min="18" max="25" name="age" pattern="1[8-9]|2[0-5]" placeholder="Age " id="age" required-data-validation-message="Please enter your age">
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                
                                 <div class="form-group">
-                                    <input  type="text" name="city" placeholder="Enter Your City" id="city" required-data-validation-message="Please enter your city">
+                                    <h4 style="color: aliceblue;">State</h4>
+                                    <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                                    <h4 style="color: aliceblue;">City</h4>
+                                    <select id ="state" class="form-control" required></select>
+<script language="javascript">print_state("sts");</script>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
