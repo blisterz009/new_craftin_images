@@ -689,7 +689,7 @@ li {
 }
 
 
-@media (max-width : 767px) {
+@media (max-width : 800px) {
     
     #main-slide .slider-content h1{
 		font-size: 28px;
@@ -706,16 +706,17 @@ li {
 		font-size: 12px;
 	}
 	#main-slide .carousel-indicators{
-		display: none;
+		display: block;
 	}
     
     #main-slide .item .slider-content{
-		display: none;
+		display: block;
 	}
     
     #main-slide .item {
         height: 400px;
     }
+   
     
 }
 
@@ -723,7 +724,7 @@ li {
 @media (max-width : 479px) {
     
     #main-slide .item .slider-content{
-		display: none;
+		display: block;
 	}
     
     #main-slide .item {
@@ -1391,7 +1392,7 @@ and (min-width : 551px){
 .contact .form-group input,
 .contact .form-group textarea {
     padding: 8px;
-	    color: wheat;
+	    color: black;
 }
 
 .contact .form-group input.form-control {
