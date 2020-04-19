@@ -1390,7 +1390,8 @@ and (min-width : 551px){
 
 .contact .form-group input,
 .contact .form-group textarea {
-    padding: 20px;
+    padding: 8px;
+	    color: wheat;
 }
 
 .contact .form-group input.form-control {
@@ -1450,7 +1451,7 @@ and (min-width : 551px){
 }
 
 .footer-contact-info ul {
-    padding-bottom: 10px;
+    padding-bottom: 1px;
 }
 
 .footer-contact-info h4 {
