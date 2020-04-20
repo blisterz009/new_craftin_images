@@ -791,26 +791,30 @@
                 <div class="row">
                     <div class="col-lg-12">
                         
-                                
-                        <form name="sentMessage" id="contactForm" novalidate>
+                                       
+                        <form name="sentMessage" id="contactForm" action="communicator.php" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h4 style="color:aliceblue">Personal Info</h4>
                                     <div class="form-group">
-                                        <input type="text" minlength="3" maxlength="46" placeholder="Enter Your Full Name" id="full" name="full" required-data-validation-message="Please enter your full name">
+                                        <input type="text" minlength="3" maxlength="46" placeholder="first name" id="full" name="first" required-data-validation-message="Please enter your first name"required>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="3" maxlength="46" placeholder="last name" id="full" name="last" required-data-validation-message="Please enter your last name" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
     
                                     <div class="form-group">
-                                        <input  input type="number" min="18" max="25" name="age" pattern="1[8-9]|2[0-5]" placeholder="Age " id="age" required-data-validation-message="Please enter your age">
+                                        <input  input type="number" min="18" max="25" name="age" pattern="1[8-9]|2[0-5]" placeholder="Age " id="age" required-data-validation-message="Please enter your age" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="form-group">
-                                        <input  type="email" name="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required-data-validation-message="Enter your email address">
+                                        <input  type="email" name="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required-data-validation-message="Enter your email address" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="form-group">
-                                        <input  type="text" name="phone" length="10" placeholder="Enter Your Phone" id="phone" required-data-validation-message="Enter your phone">
+                                        <input  type="text" name="phone" length="10" placeholder="Enter Your Phone" id="phone" required-data-validation-message="Enter your phone" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     
@@ -818,7 +822,7 @@
                                         <h4 style="color: aliceblue;">State</h4>
                                         <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
                                         <h4 style="color: aliceblue;">City</h4>
-                                        <select id ="state" class="form-control" required></select>
+                                        <select id ="state" class="form-control" name="city" required></select>
     <script language="javascript">print_state("sts");</script>
                                         <p class="help-block text-danger"></p>
                                     </div>
@@ -829,7 +833,7 @@
                                     
                                     <h4 style="color: aliceblue;">Qualification Details</h4>
                                     <div class="form-group">
-                                        <select name="category" id="category">
+                                        <select name="category" id="category" required>
                                             <option value="select">---Select Category---</option>
                                             <option value="Graduate">Graduate</option>
                                             <option value="postGraduate">Post Graduate</option>
@@ -838,7 +842,7 @@
                                     </div>
                                     <div class="form-group">
                                         <h4 style="color: aliceblue;">Internship Details</h4>
-                                        <select name="internshiptype" id="category">
+                                        <select name="internshiptype" id="category" required>
                                             <option value="select">---Select Internship Type---</option>
                                             <option value="Graduate">Part Time</option>
                                             <option value="postGraduate">Full Time</option>
@@ -1007,7 +1011,7 @@
                                     <h4 style="color: aliceblue;">Upload a recent Photograph</h4>
                                     <div class="form-group">
                                         
-                                        <input type="file" name="fileToUpload" id="fileToUpload">
+                                        <input type="file" name="uploadfile" id="fileToUpload" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     
@@ -1016,7 +1020,7 @@
                                 <div class="clearfix"></div>
                                 <div class="col-lg-12 text-center">
                                     <div id="success"></div>
-                                    <button type="submit" class="btn btn-primary" style="margin-right: 40%;">Submit</button>
+                                     <button type="submit" class="btn btn-primary" value="Send" name="submit"style="margin-right: 40%;">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -1309,37 +1313,37 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center">
-                        <h3>Contact With Us</h3>
+                        <h3>Contact Us</h3>
                         <p class="white-text">Reach out for a new project or just say hello</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+<form name="sentMessage" id="" action="virtualcontact.php" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name." name="contactName">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address." name="contactEmail">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number." name="contactNumber">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            
-                            <div class="clearfix"></div>
+                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
-                                <div id="success"></div>
+                            
                                 <button type="submit" class="btn btn-primary">Send Message</button>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
             <div class="row">
@@ -1423,7 +1427,7 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    
 
     <!-- Custom Theme JavaScript -->
     <script src="js/script.js"></script>
