@@ -689,7 +689,7 @@ li {
 }
 
 
-@media (max-width : 800px) {
+@media (max-width : 320px) {
     
     #main-slide .slider-content h1{
 		font-size: 28px;
@@ -721,7 +721,7 @@ li {
 }
 
 
-@media (max-width : 479px) {
+@media (max-width : 320px) {
     
     #main-slide .item .slider-content{
 		display: block;
