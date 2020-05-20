@@ -1,10 +1,8 @@
-# new_craftin_images
-The new official website for Craftin Images.
-This repo contains just the front end of the website.
-
 # Craftin Images Media | Group  
 ## "Be the chosen One"
 
+The new official website for Craftin Images.
+This repo contains just the front end of the website.
 ### About Us
 Craftin Images is a 360-degree media company offering the entire range of solutions to corporate’s. With an experienced and energetic team, we have the competency to understand the need and the passion of our clients to deliver results.
 
