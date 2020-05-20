@@ -1,4 +1,4 @@
-# Craftin Images Media | Group  
+# Craftin Images Media  
 ## "Be the chosen One"
 
 The new official website for Craftin Images.
